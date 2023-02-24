@@ -11,6 +11,7 @@ class ReversePolishNotation {
         "(", ")", "+", "-", "*", "/"
     )
 
+
     private fun transform(expression: String): String {
         var rpn = ""
         val operatorStack = Stack<Char>()
@@ -106,4 +107,5 @@ class ReversePolishNotation {
         }
         return "ERROR"
     }
+
 }

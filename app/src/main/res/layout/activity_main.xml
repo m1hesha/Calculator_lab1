@@ -9,27 +9,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/math_operation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
-        android:text="25+25"
         android:textAlignment="viewEnd"
         android:textColor="@color/black"
         android:textSize="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/result_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/result_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
-        android:text="=50"
         android:textAlignment="viewEnd"
         android:textColor="@color/black"
         android:textSize="35dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,16 +54,16 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/clr_button"
+                android:id="@+id/left_bracket"
                 style="@style/OperatorButton"
                 android:onClick="OnAllClearClick"
-                android:text="C" />
+                android:text="(" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/percent_button"
+                android:id="@+id/right_bracket"
                 style="@style/OperatorButton"
                 android:onClick="OnOperatorClick"
-                android:text="%" />
+                android:text=")" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/back_button"
@@ -78,7 +76,7 @@
                 android:id="@+id/div_button"
                 style="@style/OperatorButton"
                 android:onClick="OnOperatorClick"
-                android:text="/" />
+                android:text="÷" />
 
         </LinearLayout>
 
@@ -110,7 +108,7 @@
                 android:id="@+id/mult_button"
                 style="@style/OperatorButton"
                 android:onClick="OnOperatorClick"
-                android:text="*" />
+                android:text="×" />
 
         </LinearLayout>
 
@@ -185,10 +183,10 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_00"
+                android:id="@+id/clr_button"
                 style="@style/ClassicButton"
                 android:onClick="OnDigitClick"
-                android:text="00" />
+                android:text="C" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_0"
@@ -200,7 +198,7 @@
                 android:id="@+id/point_button"
                 style="@style/ClassicButton"
                 android:onClick="OnOperatorClick"
-                android:text="," />
+                android:text="." />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/equal_button"
