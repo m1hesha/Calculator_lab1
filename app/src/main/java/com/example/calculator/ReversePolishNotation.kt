@@ -89,15 +89,24 @@ class ReversePolishNotation {
                 numberStack.push(result.toDouble())
 
             } else {
-                try {
-                    numberStack.push(component.toDouble())
+                if (component != "") try {
+                    if (component == ".") numberStack.push(0.toDouble())
+                    else numberStack.push(component.toDouble())
                 } catch (e: Exception) {
-                    return "ERROR: UNEXPECTED $component"
+                    return "ERROR: UNEXPECTED"
                 }
             }
         }
 
-        return numberStack.pop().toString()
+        if (numberStack.size == 0) numberStack.push(0.toDouble())
+
+        var numberString = numberStack.pop().toBigDecimal().toPlainString()
+        val numberStringLength = numberString.length
+
+        if (numberString.substring(numberStringLength - 2, numberStringLength) == ".0")
+            numberString = numberString.substring(0, numberStringLength - 2)
+
+        return numberString
     }
 
     private fun execute(operation: String, first: Double, second: Double): String {
