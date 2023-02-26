@@ -64,7 +64,10 @@ class ReversePolishNotation {
 
         while (operatorStack.isNotEmpty()) rpn += " " + operatorStack.pop() + " "
 
-        return rpn.substring(0, rpn.length - 1).replace("  ", " ")
+        if (rpn.length > 1 && rpn.substring(rpn.length - 1, rpn.length) == " ")
+            rpn = rpn.substring(0, rpn.length - 1)
+
+        return rpn.replace("  ", " ")
     }
 
     fun calculate(expression: String): String {
