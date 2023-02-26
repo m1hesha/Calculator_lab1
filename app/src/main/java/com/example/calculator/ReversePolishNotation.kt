@@ -52,7 +52,7 @@ class ReversePolishNotation {
 
             try {
                 while (operatorStack.isNotEmpty())
-                    if (operatorPriority.getValue(operatorStack.peek()) > currentPriority)
+                    if (operatorPriority.getValue(operatorStack.peek()) >= currentPriority)
                         rpn += " " + operatorStack.pop() + " "
                     else break
             } catch (e: Exception) {
