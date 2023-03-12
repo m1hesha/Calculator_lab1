@@ -79,19 +79,6 @@ class MainActivity : AppCompatActivity() {
         return newSymbol
     }
 
-    /*
-    fun setTextFields (str: String){
-        if(result_text.text !=""){
-            math_operation.text = result_text.text
-            result_text.text= ""
-        }
-
-        math_operation.append(str)
-
-    }
-    */
-
-
     fun divZero(){
         val input = math_operation.text.toString()
         val check = Regex("÷0")
@@ -124,10 +111,6 @@ class MainActivity : AppCompatActivity() {
         if (expression.length <= 30)
             expressionField.append(addition)
     }
-
-    private fun Night_mode(){
-
-}
 }
 
 
