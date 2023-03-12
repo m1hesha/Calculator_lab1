@@ -13,13 +13,14 @@
         <item name="android:statusBarColor">#F2F2F2</item>
         <!-- Customize your theme here. -->
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">#f2f2f2</item>
     </style>
 
     <style name="OperatorButton" parent="ClassicButton">
         <item name="android:textColor">@color/btnBackground2</item>
         <item name="backgroundTint">@color/btnBackground</item>
         <item name = "android:textSize">30dp</item>
-
+        <item name="iconTint">@color/black</item>
     </style>
 
     <style name="EqualButton" parent="ClassicButton">
@@ -29,12 +30,8 @@
     </style>
 
     <style name="DigitButton" parent="ClassicButton">
-
-
         <item name="android:textColor">@color/black</item>
-
     </style>
-
 
     <style name="ClassicButton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
         <item name = "android:layout_width">65dp</item>
@@ -45,5 +42,9 @@
         <item name = "android:layout_margin">10dp</item>
     </style>
 
+    <style name="Text" >
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">35dp</item>
+    </style>
 
 </resources>

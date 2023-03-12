@@ -125,7 +125,9 @@ class MainActivity : AppCompatActivity() {
             expressionField.append(addition)
     }
 
+    private fun Night_mode(){
 
+}
 }
 
 

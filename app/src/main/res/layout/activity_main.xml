@@ -4,30 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f2f2f2"
-
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/math_operation"
+        style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:textAlignment="viewEnd"
-        android:textColor="@color/black"
-        android:textSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/result_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/result_text"
+        style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:textAlignment="viewEnd"
-        android:textColor="@color/black"
-        android:textSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -63,14 +59,13 @@
                 android:id="@+id/right_bracket"
                 style="@style/OperatorButton"
                 android:onClick="OnOperatorClick"
-                android:text=")" />
+                android:text=")"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/back_button"
                 style="@style/OperatorButton"
                 android:onClick="OnBackClick"
-                android:text="d"
-                app:icon="@drawable/baseline_backspace_24" />
+                app:icon="@drawable/baseline_backspace_24"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/div_button"
@@ -140,7 +135,7 @@
                 android:id="@+id/minus_button"
                 style="@style/OperatorButton"
                 android:onClick="OnOperatorClick"
-                android:text="-" />
+                android:text="-"/>
 
         </LinearLayout>
 

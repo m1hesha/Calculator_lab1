@@ -10,40 +10,41 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">#F2F2F2</item>
+        <item name="android:statusBarColor">@color/black </item>
         <!-- Customize your theme here. -->
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
     <style name="OperatorButton" parent="ClassicButton">
-        <item name="android:textColor">@color/btnBackground2</item>
-        <item name="backgroundTint">@color/btnBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">#4e4e4e</item>
         <item name = "android:textSize">30dp</item>
-
+        <item name="iconTint">@color/white</item>
     </style>
 
     <style name="EqualButton" parent="ClassicButton">
         <item name="backgroundTint">@color/purple_200</item>
         <item name = "android:textSize">30dp</item>
-
     </style>
 
     <style name="DigitButton" parent="ClassicButton">
-
-
-        <item name="android:textColor">@color/black</item>
-
+        <item name="android:textColor">@color/white</item>
     </style>
-
 
     <style name="ClassicButton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
         <item name = "android:layout_width">65dp</item>
         <item name = "android:layout_height">65dp</item>
         <item name = "cornerRadius">36dp</item>
-        <item name = "backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name = "backgroundTint">#171717</item>
         <item name = "android:textSize">23dp</item>
         <item name = "android:layout_margin">10dp</item>
     </style>
 
+    <style name="Text" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">35dp</item>
+    </style>
 
 </resources>
