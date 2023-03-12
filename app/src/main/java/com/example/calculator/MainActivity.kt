@@ -2,12 +2,9 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-interface ValueProvider {
-    fun getValue(variableName: String): Double
-}
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         point_button.setOnClickListener { setTextFields(".") }
         left_bracket.setOnClickListener { setTextFields("(") }
         right_bracket.setOnClickListener { setTextFields(")") }
+
 
         clr_button.setOnClickListener {
             math_operation.text = ""
@@ -70,9 +68,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            else{
-
-            }
         }
 
     }
@@ -84,13 +79,18 @@ class MainActivity : AppCompatActivity() {
         return newSymbol
     }
 
+    /*
     fun setTextFields (str: String){
         if(result_text.text !=""){
             math_operation.text = result_text.text
             result_text.text= ""
         }
+
         math_operation.append(str)
+
     }
+    */
+
 
     fun divZero(){
         val input = math_operation.text.toString()
@@ -99,6 +99,32 @@ class MainActivity : AppCompatActivity() {
             result_text.text = "Делить на 0 нельзя!"
         }
     }
+
+    private fun setTextFields(addition: String) {
+        if(result_text.text !=""){
+            math_operation.text = result_text.text
+            result_text.text= ""
+        }
+        
+        val expressionField: TextView = findViewById(R.id.math_operation)
+        val expression = expressionField.text.toString()
+
+        val charList = listOf("+", "-", "×", "÷")
+
+        if (expressionField.length() >= 1) {
+            val lastSymbol = expression.substring(expression.length - 1, expression.length)
+
+            if (charList.contains(lastSymbol) && charList.contains(addition))
+                expressionField.text = expression.substring(0, expression.length - 1)
+
+            if (lastSymbol == "." && addition == ".")
+                expressionField.text = expression.substring(0, expression.length - 1)
+        }
+
+        if (expression.length <= 30)
+            expressionField.append(addition)
+    }
+
 
 }
 
