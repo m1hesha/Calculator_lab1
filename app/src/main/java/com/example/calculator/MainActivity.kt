@@ -51,11 +51,11 @@ class MainActivity : AppCompatActivity() {
 
         equal_button.setOnClickListener {
             if (math_operation.text.toString() != "") {
-            val expression = replacedSymbols()
-            val input = expression.toString()
-            val result = ReversePolishNotation().calculate(input)
-            val num = result.toDoubleOrNull()
-            divZero()
+                val expression = replacedSymbols()
+                val input = expression.toString()
+                val result = ReversePolishNotation().calculate(input)
+                val num = result.toDoubleOrNull()
+                divZero()
 
                 if (num != null) {
                     val intPart = num.toInt()
@@ -101,11 +101,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTextFields(addition: String) {
-        if(result_text.text !=""){
+        if(result_text.text !="" && result_text.text != "Делить на 0 нельзя!"){
             math_operation.text = result_text.text
             result_text.text= ""
         }
-        
+
         val expressionField: TextView = findViewById(R.id.math_operation)
         val expression = expressionField.text.toString()
 
@@ -127,7 +127,6 @@ class MainActivity : AppCompatActivity() {
 
 
 }
-
 
 
 
